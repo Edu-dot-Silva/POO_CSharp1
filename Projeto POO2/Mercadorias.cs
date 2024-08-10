@@ -11,13 +11,19 @@ namespace Projeto_POO2
         //Atributos ou Propriedades da Classe (Variáveis da Classe) Encapsulamento Público (permitir acesso externo)
 
         public string nome;
-        public double preco;
+        public double preco, valor_reajuste, valor_total;
+        public int quantidade;
 
         //Criando o Método da Classe com Acesso Externo (Encapsulamento Público)
 
         public void Atualiza_Preco(double porcentagem)
         {
-            preco = preco + (preco * porcentagem /100);
+            valor_reajuste = preco + (preco * porcentagem /100);
+        }
+
+        public void Fechar_Pedido()
+        {
+            valor_total = preco * quantidade;
         }
     
     }

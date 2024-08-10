@@ -40,26 +40,95 @@ namespace Projeto_POO2
 
             produto1.nome=Txt_Produto1.Text; //Atribuindo o campo digitado para dentro da variável 
             produto1.preco=double.Parse(Txt_Valor1.Text); //Atribuindo o valor digitado e convertido para double para dentro da variável
-
+            produto1.valor_reajuste = double.Parse(txt_Valor_Reajuste.Text); //atribuindo o valor de reajuste digitado pelo usuario
+            
+            
+            
             produto2.nome=Txt_Produto2.Text;
             produto2.preco=Convert.ToDouble(Txt_Valor2.Text);
+            produto2.valor_reajuste = double.Parse(txt_Valor_Reajuste.Text);
+            
 
             produto3.nome=Txt_Produto3.Text;
             produto3.preco = double.Parse(Txt_Valor3.Text);
-
+            produto3.valor_reajuste = double.Parse(txt_Valor_Reajuste.Text);
+            
             //Mostrando os produtos e valores que estão na memória
 
             Lbl_Resultado.Text = "Produto 1: " + produto1.nome + "\n" + "Preço Inicial: " + produto1.preco.ToString("c2") + "\n";
-            produto1.Atualiza_Preco(10); //Usando o Método para Reajustar o Valor em 10%
-            Lbl_Resultado.Text += "Novo Preço: " + produto1.preco.ToString("c2") + "\n\n";
+            //produto1.Atualiza_Preco(10); //Usando o Método para Reajustar o Valor em 10%
+            produto1.Atualiza_Preco(produto1.valor_reajuste); //aplicando o metodo para reajuste de valor 
+            Lbl_Resultado.Text += "Novo Preço: " + produto1.valor_reajuste.ToString("c2") + "\n\n";
 
             Lbl_Resultado.Text += "Produto 2: " + produto2.nome + "\n" + "Preço Inicial: " + produto2.preco.ToString("c2") + "\n";
-            produto2.Atualiza_Preco(10); //Usando o Método para Reajustar o Valor em 10%
-            Lbl_Resultado.Text += "Novo Preço: " +produto2.preco.ToString("c2") + "\n\n";
+            //produto2.Atualiza_Preco(10); //Usando o Método para Reajustar o Valor em 10%
+            produto2.Atualiza_Preco(produto2.valor_reajuste); //aplicando o metodo para reajuste de valor 
+            Lbl_Resultado.Text += "Novo Preço: "  +produto2.valor_reajuste.ToString("c2") + "\n\n";
 
             Lbl_Resultado.Text += "Produto 3: " + produto3.nome + "\n" + "Preço Inicial: " + produto3.preco.ToString("c2") + "\n";
-            produto3.Atualiza_Preco(10); //Usando o Método para Reajustar o Valor em 10%
-            Lbl_Resultado.Text += "Novo Preço: " + produto3.preco.ToString("c2") + "\n\n";
+            //produto3.Atualiza_Preco(10); //Usando o Método para Reajustar o Valor em 10%
+            produto3.Atualiza_Preco(produto3.valor_reajuste); //aplicando o metodo para reajuste de valor 
+            Lbl_Resultado.Text += "Novo Preço: " + produto3.valor_reajuste.ToString("c2") + "\n\n";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_Titulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_Produto2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_Valor2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Sair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Btn_Limpar_Click(object sender, EventArgs e)
+        {
+            Lbl_Resultado.Text = "";
+        }
+
+        private void txt_Valor_Reajuste_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_fecharPedido_Click(object sender, EventArgs e)
+        {
+            produto1.quantidade = int.Parse(txt_Quant1.Text); //atribuindo variavel quantidade
+            produto2.quantidade = int.Parse(txt_Quant2.Text);
+            produto3.quantidade = int.Parse(txt_Quant3.Text);
+
+            produto1.preco = double.Parse(Txt_Valor1.Text); //atribuindo variavel preco
+            produto2.preco = double.Parse(Txt_Valor2.Text);
+            produto3.preco = double.Parse(Txt_Valor3.Text);
+
+            produto1.Fechar_Pedido(); //aplicando o metodo
+            produto2.Fechar_Pedido();
+            produto3.Fechar_Pedido();
+
+            
+
+            txt_Total1.Text = produto1.valor_total.ToString("c2");
+            //convertendo double para string em formato de moeda
+            txt_Total2.Text = produto2.valor_total.ToString("c2");
+            txt_Total3.Text = produto3.valor_total.ToString("c2");
+
+            txt_valorFinal.Text = (produto1.valor_total + produto2.valor_total + produto3.valor_total).ToString("c2");
+          
         }
     }
 }
