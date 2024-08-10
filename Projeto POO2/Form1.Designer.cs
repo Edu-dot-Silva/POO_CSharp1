@@ -202,7 +202,7 @@
             this.txt_Valor_Reajuste.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Valor_Reajuste.Location = new System.Drawing.Point(862, 317);
             this.txt_Valor_Reajuste.Name = "txt_Valor_Reajuste";
-            this.txt_Valor_Reajuste.Size = new System.Drawing.Size(105, 31);
+            this.txt_Valor_Reajuste.Size = new System.Drawing.Size(130, 31);
             this.txt_Valor_Reajuste.TabIndex = 18;
             this.txt_Valor_Reajuste.TextChanged += new System.EventHandler(this.txt_Valor_Reajuste_TextChanged);
             // 
@@ -292,26 +292,29 @@
             // 
             // txt_Total1
             // 
+            this.txt_Total1.Enabled = false;
             this.txt_Total1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Total1.Location = new System.Drawing.Point(862, 101);
             this.txt_Total1.Name = "txt_Total1";
-            this.txt_Total1.Size = new System.Drawing.Size(105, 31);
+            this.txt_Total1.Size = new System.Drawing.Size(130, 31);
             this.txt_Total1.TabIndex = 28;
             // 
             // txt_Total2
             // 
+            this.txt_Total2.Enabled = false;
             this.txt_Total2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Total2.Location = new System.Drawing.Point(862, 156);
             this.txt_Total2.Name = "txt_Total2";
-            this.txt_Total2.Size = new System.Drawing.Size(105, 31);
+            this.txt_Total2.Size = new System.Drawing.Size(130, 31);
             this.txt_Total2.TabIndex = 29;
             // 
             // txt_Total3
             // 
+            this.txt_Total3.Enabled = false;
             this.txt_Total3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Total3.Location = new System.Drawing.Point(862, 207);
             this.txt_Total3.Name = "txt_Total3";
-            this.txt_Total3.Size = new System.Drawing.Size(105, 31);
+            this.txt_Total3.Size = new System.Drawing.Size(130, 31);
             this.txt_Total3.TabIndex = 30;
             // 
             // btn_fecharPedido
@@ -406,10 +409,11 @@
             // 
             // txt_valorFinal
             // 
+            this.txt_valorFinal.Enabled = false;
             this.txt_valorFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_valorFinal.Location = new System.Drawing.Point(862, 261);
             this.txt_valorFinal.Name = "txt_valorFinal";
-            this.txt_valorFinal.Size = new System.Drawing.Size(105, 31);
+            this.txt_valorFinal.Size = new System.Drawing.Size(130, 31);
             this.txt_valorFinal.TabIndex = 33;
             // 
             // Frm_Mercadorias
